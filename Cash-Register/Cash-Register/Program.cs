@@ -13,25 +13,25 @@ namespace Cash_Register
             string cont = "n";
             char ch;
             string skuNum;
-            float asp = 0;
+            float asp = .97f;
             float bananas = 0;
-            float cake = 0;
-            float eggs = 0;
-            float pasta = 0;
+            float cake = 3.88f;
+            float eggs = 1.89f;
+            float pasta = 3.29f;
             float potatoes = 0;
-            float soup = 0;
+            float soup = 2.99f;
             float tax = .07f;
             float sum = 0f;
             float total = 0f;
 
 
-            Cart prices = new Cart();
+            //Cart prices = new Cart();
 
 
 
             while (cont == "n")
             {
-                Console.WriteLine("Fresh Foods Ch\n" +
+                Console.WriteLine("Fresh Foods\n" +
                 "Grocery List:");
                 Console.WriteLine("Enter a: for Asparagus $.97");
                 Console.WriteLine("Enter 2121: for Bananas $1.07 per LB");
@@ -77,31 +77,26 @@ namespace Cash_Register
                 switch (ch)
                 {
                     case 'a':
-                        asp += .97f;
                         sum += asp;
                         Console.WriteLine(sum);
 
                         break; 
                     case 'c':
-                        cake += 3.88f;
                         sum += cake;
                         Console.WriteLine(sum);
 
                         break;
                     case 'e':
-                        eggs += 1.89f;
                         sum += eggs;
                         Console.WriteLine(sum);
 
                         break;
                     case 'p':
-                        pasta += 3.29f;
                         sum += pasta;
                         Console.WriteLine(sum);
 
                         break;
                     case 's':
-                        soup += 2.99f;
                         sum += soup;
                         Console.WriteLine(sum);
 
@@ -121,8 +116,8 @@ namespace Cash_Register
             total = sum;
             sum *= tax;
             total += sum;
-            Console.WriteLine($"Tax:$0.07" +
-                $"The grand total is {total}\n");
+            Console.WriteLine($"Tax:$0.07\n" +
+                $"The grand total is {total}");
         }
     }
 }
